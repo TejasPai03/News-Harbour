@@ -17,7 +17,6 @@ pip install virtualenv
 
 ```
 vitualenv venv
-# Here venv is the name of the virtual environment directory to be created
 ```
 
 3. Activate the virtual environment based on your Operating System:
