@@ -33,7 +33,7 @@ $ source myvenv/bin/activate
 4. Install packages from `requirements.txt`:
 
 ```
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 
