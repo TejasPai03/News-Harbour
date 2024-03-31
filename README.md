@@ -1,25 +1,32 @@
 # News Harbour
 
-News harbour is a Python mini-project aimed at collecting and organising news from diverse online sources using web crawling and scraping techniques.
+News harbour is a Python-based mini-project aimed at collecting and organising news from diverse online sources using web crawling and scraping techniques.
 
 
 ---
 
 ## SETUP
 
-1. Install the package virtualenv using pip:
+1. Clone the repository
+   
+```
+git clone https://github.com/TejasPai03/News-Harbour.git
+cd News-Harbour
+```
+
+2. Install the package virtualenv using pip:
 
 ```
 pip install virtualenv
 ```
 
-2. Create a virtual environment by running the following commands within the project directory:
+3. Create a virtual environment by running the following commands within the project directory:
 
 ```
 vitualenv venv
 ```
 
-3. Activate the virtual environment based on your Operating System:
+4. Activate the virtual environment based on your Operating System:
 
 **Windows venv activation**
 ```
