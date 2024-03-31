@@ -23,10 +23,7 @@ vitualenv venv # Here venv is the name of the virtual environment directory to b
 
 **Windows venv activation**
 ```
-# In cmd.exe
-venv\Scripts\activate.bat
-# In PowerShell
-venv\Scripts\Activate.ps1
+./venv/Scripts/activate
 ```
 
 **Linux and MacOS venv activation**
