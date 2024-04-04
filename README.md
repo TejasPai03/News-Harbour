@@ -23,7 +23,7 @@ pip install virtualenv
 3. Create a virtual environment by running the following commands within the project directory:
 
 ```
-vitualenv venv
+virtualenv venv
 ```
 
 4. Activate the virtual environment based on your Operating System:
