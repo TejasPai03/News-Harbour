@@ -7,8 +7,8 @@
 }
 
 :root {
-    --primary-text-color: #50514f;
-    --secondary-text-color: #8a89c0;
+    --primary-text-color: #F5F5F3;
+    --secondary-text-color: #A4A5B6;
     --accent-color: #8a89c0;
     --accent-color-dark: #1d69a3;
 }
@@ -16,7 +16,7 @@
 body {
     font-family: "Poppins", sans-serif;
     color: var(--primary-text-color);
-    background-color: #F4F4F6;
+    background-color: #1A1A32;
 }
 
 p {
@@ -45,8 +45,8 @@ ul {
 }
 
 nav {
-    background-color: #fdfff7;
-    box-shadow: 0 0 4px #50514f;
+    background-color: #0A0A23;
+    box-shadow: 0 0 4px #000;
     position: fixed;
     top: 0;
     z-index: 99;
@@ -79,16 +79,11 @@ nav {
 }
 
 .hover-link:active {
-    color: #4da167;
+    color: #433D4B;
 }
 
 .nav-item.active {
     color: var(--accent-color);
-}
-
-.search-bar {
-    height: 32px;
-    gap: 8px;
 }
 
 main{
@@ -109,14 +104,24 @@ main{
     padding: 3rem 1.5rem 1.5rem;
     border-radius: 7px;
     cursor: pointer;
-    background-color: #E6E6E9;
+    border: solid;
+    border-color: #F5F7F6;
+    background-color: #3A3A4F;
     overflow: hidden;
     transition: all .3s ease;
 }
 
 .card:hover{
-    background-color: #d5d5d5;
+    background-color: #F5F5F3;
     transform: translateY(-2px);
+    transition: .05s;
+}
+
+.card:hover .card-content h3,
+.card:hover .card-content h5,
+.card:hover .card-content p,
+.card:hover .card-content h6 {
+    color: black;
 }
 
 .card-image img{
