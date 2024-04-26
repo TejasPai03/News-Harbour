@@ -1,5 +1,6 @@
 import scrapy
 import re
+import json
 
 class HtspiderSpider(scrapy.Spider):
     name = 'htspider'
@@ -21,6 +22,7 @@ class HtspiderSpider(scrapy.Spider):
                 'date' : date,
                 'source' : "Hindustan Times"
             }
+
         pass
         
     def getCategory(self, url):
