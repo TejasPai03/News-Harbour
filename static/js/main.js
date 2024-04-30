@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const cardContainer = document.querySelector(".card-container");
     const template = document.getElementById("template-news-card");
+    let newsData = [];
 
     // Dynamically create cards
     function createNewsCard(news) {
@@ -20,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Remove old cards and put specific category cards
     function renderNewsCards(data) {
+        cardContainer.innerHTML = ''; // Clear existing news cards
         data.forEach(news => {
             const card = createNewsCard(news);
             cardContainer.appendChild(card);
@@ -29,9 +31,21 @@ document.addEventListener("DOMContentLoaded", function() {
     fetch('../News_Harbour/News_Harbour/output/htspider.json')
         .then(response => response.json())
         .then(data => {
-            renderNewsCards(data);
+            newsData = data;
+            renderNewsCards(newsData); 
         })
         .catch(error => {
             console.error('Error fetching JSON:', error);
         });
+
+    // Cateogry news seperation (normal)
+    const menuItems = document.querySelectorAll('.nav-item');
+    menuItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const category = this.id;
+            const filteredNews = newsData.filter(news => news.category === category); // Filter news by category
+            renderNewsCards(filteredNews);
+        });
+    });
+
 });
