@@ -93,20 +93,23 @@ main{
 
 .card-container{
     justify-content: space-between;
+    display: flex;
     flex-wrap: wrap;
-    row-gap: 20px;
-    align-items: start;
+    gap: 20px;
 }
 
 .card{
+    position: relative;
     width: 360px;
-    min-height: 400px;
-    padding: 3rem 1.5rem 1.5rem;
+    min-height: 450px;
+    padding: 1.5rem;
     border-radius: 7px;
     cursor: pointer;
     border: solid;
     border-color: #F5F7F6;
     background-color: #3A3A4F;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     transition: all .3s ease;
 }
@@ -114,7 +117,7 @@ main{
 .card:hover{
     background-color: #F5F5F3;
     transform: translateY(-2px);
-    transition: .05s;
+    /* transition: .05s; */
 }
 
 .card:hover .card-content h3,
@@ -141,6 +144,11 @@ main{
 }
 
 .news-source {
-    margin-block: 12px;
-    margin-left: auto;
+    font-size: small;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 1rem;
+    color: white;
 }
