@@ -1,12 +1,10 @@
 import scrapy
 import re
-import json
 
 class HtspiderSpider(scrapy.Spider):
     name = 'htspider'
     allowed_domains = ['www.hindustantimes.com']
     start_urls = ['http://www.hindustantimes.com/']
-    
 
     def parse(self, response):
         articles = response.css("div.cartHolder.listView.track.timeAgo")        
@@ -22,8 +20,6 @@ class HtspiderSpider(scrapy.Spider):
                 'date' : date,
                 'source' : "Hindustan Times"
             }
-
-        pass
         
     def getCategory(self, url):
         match = re.search(r"/([^/]+)/", url)
