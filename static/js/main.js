@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         clone.querySelector(".card-image img").src = news.img;
         clone.querySelector(".card-content h3").textContent = news.headline;
         clone.querySelector(".news-date").textContent = news.date;
-        clone.querySelector(".news-description").textContent = news.headline;
+        // clone.querySelector(".news-description").textContent = news.headline;
         clone.querySelector(".news-source").textContent = "Source: " + news.source;
 
         clone.querySelector('.card').addEventListener('click', function() {
