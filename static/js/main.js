@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function createNewsCard(news) {
         const clone = template.content.cloneNode(true);
         clone.querySelector(".card-image img").src = news.img;
-        clone.querySelector(".card-content h3").textContent = news.headline;
+        clone.querySelector(".card-content h4").textContent = news.headline;
         clone.querySelector(".news-date").textContent = news.date;
         // clone.querySelector(".news-description").textContent = news.headline;
         clone.querySelector(".news-source").textContent = "Source: " + news.source;
@@ -28,12 +28,22 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    // Shuffle news
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
     // Fetch data from multiple JSON files
     function fetchNewsData(jsonFiles) {
         Promise.all(jsonFiles.map(file => fetch(file)))
             .then(responses => Promise.all(responses.map(response => response.json())))
             .then(datas => {
                 newsData = datas.flat();
+                newsData = shuffleArray(newsData);
                 renderNewsCards(newsData); 
             })
             .catch(error => {
