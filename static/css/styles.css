@@ -100,7 +100,7 @@ main{
 
 .card{
     position: relative;
-    width: 360px;
+    width: calc(25% - 15px); /* Adjusted width to fit four cards in one row */
     min-height: 450px;
     padding: 1.5rem;
     border-radius: 7px;
@@ -111,7 +111,7 @@ main{
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 
 .card:hover{
@@ -140,11 +140,12 @@ main{
 }
 
 .news-date{
+    font-size: smaller;
     margin-block: 12px;
 }
 
 .news-source {
-    font-size: small;
+    font-size: 11px;
     position: absolute;
     bottom: 0;
     right: 0;
