@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const card = createNewsCard(news);
             cardContainer.appendChild(card);
         });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     // Shuffle news

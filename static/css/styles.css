@@ -120,7 +120,7 @@ main{
     /* transition: .05s; */
 }
 
-.card:hover .card-content h3,
+.card:hover .card-content h4,
 .card:hover .card-content h5,
 .card:hover .card-content p,
 .card:hover .card-content h6 {
@@ -196,4 +196,104 @@ main{
 .team-member-content a {
     color: #007bff;
     text-decoration: none;
+}
+
+.footer {
+    background-color: #2A2B41;
+}
+
+.footer__container {
+    padding: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer__title,
+.footer__link,
+.footer__sub-title,
+.footer__qr-description,
+.footer__copy {
+    color: #E0DFE0;
+    margin-bottom: 1rem;
+}
+
+.footer__title {
+    text-align: center;
+    margin-bottom: 5px;
+    flex-basis: 100%;
+}
+
+.footer__content {
+    margin-right: 20px;
+}
+
+.footer__description {
+    margin-top: 5px;
+}
+
+
+.footer__column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer__content {
+    margin-right: 20px;
+}
+
+.footer__list {
+    padding-top: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.footer__connect{
+    margin-top: 2rem;
+    margin-bottom: .75rem;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.25rem;
+}
+
+.footer__social-img {
+    margin-top: 1px;
+    width: 20px;
+    height: auto;
+}
+
+.footer__social-link {
+    background-color: #E0DFE0;
+    color: #2A2B41;
+    padding: .25rem;
+    border-radius: .25rem;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer__qr-image {
+    width: 150px;
+    height: auto; 
+}
+
+
+.footer__qr-description {
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+.footer__copy {
+    display: block;
+    margin-top: 20px;
+    color: #E0DFE0;
+    text-align: center;
+    font-size: 0.75rem;
 }
