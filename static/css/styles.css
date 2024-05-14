@@ -86,6 +86,10 @@ nav {
     color: var(--accent-color);
 }
 
+.developer-container {
+    margin-top: 10px;
+}
+
 main{
     padding-block: 80px;
     margin-top: 80px;

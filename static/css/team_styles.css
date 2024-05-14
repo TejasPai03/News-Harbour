@@ -1,0 +1,85 @@
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-text-color);
+    background-color: #1A1A32;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+nav {
+    background-color: #0A0A23;
+    box-shadow: 0 0 4px #000;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+}
+
+.main-nav {
+    justify-content: space-between;
+    padding-block: 8px;
+    flex-direction: column;
+}
+
+.nh-logo img {
+    width: 120px;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 20px;
+    text-align: center;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: inline-block;
+    width: 350px; /* Set a fixed width for all team member containers */
+    padding: 20px; /* Add padding to the team member containers */
+}
+
+.team-member:not(:last-child) {
+    margin-right: 10px; /* Add margin between team member containers */
+}
+
+.team-member img {
+    width: 150px; /* Adjust image size */
+    height: auto;
+    border-radius: 50%;
+    margin: 0 auto 20px; /* Add margin to center image vertically */
+    display: block;
+}
+
+.team-member-content {
+    padding: 0 20px; /* Add padding to the content */
+    text-align: center; /* Center align content */
+}
+
+.team-member-content h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.team-member-content p {
+    margin-bottom: 0;
+    color: #666;
+}
+
+.team-member-content a {
+    color: #007bff;
+    text-decoration: none;
+}
