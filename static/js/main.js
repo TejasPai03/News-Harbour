@@ -54,7 +54,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // List the JSON files and map newspapers
     const newspaperJSON = {
         "htimes": '../News_Harbour/News_Harbour/output/htspider.json',
-        "toi": '../News_Harbour/News_Harbour/output/toispider.json',
+        "timesuk": '../News_Harbour/News_Harbour/output/thetimesspider.json',
+        "etimes": '../News_Harbour/News_Harbour/output/etspider.json'
         // Add other json paths
     };
 

@@ -1,5 +1,6 @@
 import scrapy
 import re
+from time import sleep
 
 class ToispiderSpider(scrapy.Spider):
     name = "toispider"
@@ -15,7 +16,7 @@ class ToispiderSpider(scrapy.Spider):
             yield {
                 'headline' : article.css('figcaption::text').get(),
                 'link' : article.css('figure a::attr(href)').get(),
-                'img' : article.css('div.Bw78m.cardactive img::attr(src)').get(),
+                'img' : article.css('div.Bw78m.cardactive img[src]::attr(src)').get(),
                 'category' : category,
                 'date' : date,
                 'source' : "Times of India"
