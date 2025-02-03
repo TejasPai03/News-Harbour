@@ -17,12 +17,14 @@ body {
     font-family: "Poppins", sans-serif;
     color: var(--primary-text-color);
     background-color: #1A1A32;
+    font-size: 16px;
 }
 
 p {
     font-family: "Roboto", sans-serif;
     color: var(--secondary-text-color);
-    line-height: 1.4rem;
+    line-height: 1.4;
+    font-size: 1rem; 
 }
 
 a {
@@ -39,8 +41,8 @@ ul {
 }
 
 .container {
-    max-width: 1180px;
-    margin-inline: auto;
+    max-width: 90%;
+    margin: 0 auto;
     overflow: hidden;
 }
 
@@ -68,6 +70,11 @@ nav {
     align-items: center;
     font-size: large;
     gap: 30px;
+    text-align: center;
+}
+
+.nav-item {
+    font-size: 1rem;
 }
 
 .hover-link {
@@ -96,7 +103,7 @@ main{
 }
 
 .card-container{
-    justify-content: space-between;
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -104,7 +111,7 @@ main{
 
 .card{
     position: relative;
-    width: calc(25% - 15px); /* Adjusted width to fit four cards in one row */
+    width: calc(25% - 2%);
     min-height: 450px;
     padding: 1.5rem;
     border-radius: 7px;
@@ -165,30 +172,30 @@ main{
     margin-bottom: 20px;
     overflow: hidden;
     display: inline-block;
-    width: 300px; /* Set a fixed width for all team member containers */
-    padding: 20px; /* Add padding to the team member containers */
+    width: 300px;
+    padding: 20px;
 }
 
 .team-member:not(:last-child) {
-    margin-right: 20px; /* Add margin between team member containers */
+    margin-right: 20px;
 }
 
 .team-member img {
-    width: 150px; /* Adjust image size */
+    width: 150px;
     height: auto;
     border-radius: 50%;
-    margin: 0 auto 20px; /* Add margin to center image vertically */
+    margin: 0 auto 20px;
     display: block;
 }
 
 .team-member-content {
-    padding: 0 20px; /* Add padding to the content */
-    text-align: center; /* Center align content */
+    padding: 0 20px;
+    text-align: center;
 }
 
 .team-member-content h2 {
     margin-top: 0;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #333;
 }
 
@@ -288,7 +295,6 @@ main{
     height: auto; 
 }
 
-
 .footer__qr-description {
     text-align: center;
     font-size: 0.75rem;
@@ -300,4 +306,59 @@ main{
     color: #E0DFE0;
     text-align: center;
     font-size: 0.75rem;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .card {
+        width: calc(50% - 10px);
+        min-height: 400px;
+        padding: 1rem;
+    }
+
+    .team-member {
+        width: 100%;
+    }
+
+    .team-member img {
+        width: 120px;
+    }
+
+    .team-member-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .footer__connect {
+        text-align: center;
+    }
+
+    .nav-menu ul {
+        text-align: center;
+    }
+
+    .nav-item {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    .card {
+        width: 90%;
+        min-height: 350px;
+    }
+
+    .team-member-content h2 {
+        font-size: 1rem;
+    }
+
+    .nav-item {
+        font-size: 0.8rem;
+    }
 }
