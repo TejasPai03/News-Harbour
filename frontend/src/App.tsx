@@ -1,10 +1,11 @@
 import Header from "./components/header/header" 
+import "./app.css"
 
 function App() {
   return (
-    <>
-      <Header title="News Harbour but better" />
-    </>
+    <div>
+      <Header />
+    </div>
   )
 }
 
